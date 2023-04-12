@@ -32,6 +32,8 @@ const reducer = (state = initialState, action) => {
       return produce(state, (draft) => {
         draft.address.street = action.payload;
       });
+    // produce accepts two arguments. The first argument is the state and the second argument is a function which receives a draft copy of the state
+    // Immer allows us to update state as if it is mutable (i.e can be changed)
 
     default: {
       return state;
